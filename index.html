@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Tenali+Ramakrishna&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="root">
+
+        <button id="game-start" class="btn" onclick="startTheGame()">Start The Game!</button>
+        <div class="container_info"></div>
+        <div class="container-win">
+            <h3>Game Over!</h3>
+            <button id="restart-win" onclick="window.location.reload();">Restart</button>
+        </div>
+        <div class="container_game-over">
+            <h3>No tile left on the stock.</h3>
+            <h4>Game Over</h4>
+            <button id="restart" onclick="window.location.reload();">Restart</button>
+        </div>
+        <div class="tiles">
+            <ul id="player1" onclick="playerStartsToPlay(event);">
+            </ul>
+            <div class="board board_display-none" id="board"></div>
+            <ul id="player2" onclick="playerStartsToPlay(event);"></ul>
+        </div>
+
+    </div>
+    <script src="./domino.js"></script>
+</body>
+
+</html>
